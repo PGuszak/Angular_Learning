@@ -1,0 +1,24 @@
+<app-task-item 
+    *ngFor = "let task of tasks"
+    [task] = "task"
+    (onDeleteTask) = "deleteTask(task)"
+    (onToggleReminder) = "toggleReminder(task)"
+></app-task-item>
+
+<!--
+    -uses the different tag because this list is now
+        a list of components of format task-item
+        as to make each component super simple
+    -the [task] line is a prop so we have access to it as 
+        a variable to use over each iteration
+            but must go input the task-item and 
+            make the variable first using Input as the 
+            variable of tasks is an export itself
+    -*ngFor is a loop function to use inline ts/js
+    in this case to traverse over the tasks in our db 
+    also allows us access to each task variable feild to use
+    -Line 4: this is tied to the now created event in the 
+        task-item.component which will then use its components
+        function "deleteTask(task)" to then use the service function 
+        (same name) as the component function for full functionality.
+-->

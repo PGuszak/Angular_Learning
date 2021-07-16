@@ -1,0 +1,19 @@
+<div class="task"
+ [ngClass]="{reminder: task.reminder}"
+ (dblclick) = "onToggle(task)"
+ > <!--set the reminder class if rminder is true - just don't get the syntax-->
+<!--can use this as a variable because it has access
+    from out INPUT function in the compontents ts file
+    Line 7: on a single click call this function (in the .ts of this DIR)
+    LOOK UP WHAT "[ngClass]="{something: something.something}" does!!!!!!!!
+    don't know how on true it just turns green!!!!!!!!!!!
+-->
+    <h3> 
+        {{ task.text }} <fa-icon 
+            (click) = "onDelete(task)"
+            [icon]="faTimes" 
+            pull="right" 
+            [ngStyle]="{'color': 'red'}"></fa-icon>
+    </h3>
+    <p> {{ task.day }}</p>
+</div>
