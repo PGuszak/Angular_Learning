@@ -1,6 +1,7 @@
 <header>
     <h1>{{title}}</h1>
     <app-button 
+    *ngIf="hasRoute('/')"
     color="{{ showAddTask ? 'red' : 'orange' }}"
     text="{{ showAddTask ? 'Close' : 'Add Task' }}"
     (btnClick)="toggleAddTask()"></app-button>
@@ -11,4 +12,6 @@
     but saying this variable is true if true  orange else turn red
         use inline js/ts to access this variables state. same for the 
         text of the button if true say add task else say closed
+
+    the ngIF: if the fucntion in the ts is true show this button
 -->
