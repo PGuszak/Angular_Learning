@@ -29,6 +29,12 @@
       "text": "task 5",
       "day": "September 5th at 2:30pm",
       "reminder": false
+    },
+    {
+      "text": "Test Push",
+      "day": "2021-07-18",
+      "reminder": true,
+      "id": 6
     }
   ]
 }

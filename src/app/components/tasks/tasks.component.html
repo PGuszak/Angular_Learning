@@ -1,3 +1,5 @@
+<!-- cannot use tasks in the line bc we did not make the variable like in the app-task-item so use the event  -->
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
 <app-task-item 
     *ngFor = "let task of tasks"
     [task] = "task"

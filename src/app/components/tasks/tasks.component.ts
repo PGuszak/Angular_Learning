@@ -35,4 +35,12 @@ export class TasksComponent implements OnInit {
       //uses the subscribe because this is an observable function call
       this.taskservice.updateTaskReminder(task).subscribe();
   }
+
+  addTask(task:Task) {
+    console.log(task); //use this to debug as to make sure the %event var works in the html
+  
+    //go to serice first to make the request line then come back to call the service
+    this.taskservice.addTask(task).subscribe((task) =>(this.tasks.push(task)));
+    //ask about the whole function that is in the subscrible parens - don't get how they work
+  }
 }
