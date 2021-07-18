@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   subscription!: Subscription;
 
   constructor(private uiService:UiService) {
-    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddTask = value);
+    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showAddTask = value));
     //this componeents subscription var is our sucscription to our observable to our uiservice component 
     // onToggle function and settings our variable of "showAddTask" to our value we are taking in
    }

@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" class="add-form" style="border-bottom: blue;">
+<form *ngIf="showAddTask" (ngSubmit)="onSubmit()" class="add-form" style="border-bottom: blue;">
     <!-- use ngSubmit in this not the normal "action = post" -->
     <div class="form-control">
         <label for="TaskName">Task Name:</label>
@@ -22,3 +22,4 @@
 
 <!-- the ngModel must have the same value as the "name" feild use the [] and the () cause its a 2 way data binding -->
 <!-- make sure the feild in teh ngModel is the same variable spelling as the ones in the component -->
+<!-- use a ngIf to set a tag variable for use in the ts -->

@@ -12,7 +12,7 @@ export class UiService {
 
   //function to toggle add task
   toggleAddTask(): void {
-    console.log(123);
+    // console.log(123);
     this.showAddTask = !this.showAddTask;
     this.subject.next(this.showAddTask); //toggles the boolean val
   }
