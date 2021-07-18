@@ -1,4 +1,14 @@
 <header>
     <h1>{{title}}</h1>
-    <app-button color="orange" text="Add Task" (btnClick)="toggleAddTask()"></app-button>
+    <app-button 
+    color="{{ showAddTask ? 'orange' : 'red' }}"
+    text="{{ showAddTask ? 'Add Task' : 'Closed' }}"
+    (btnClick)="toggleAddTask()"></app-button>
 </header>
+
+<!--
+    line 4: make sure to have format of double braces and quotes
+    but saying this variable is true if true  orange else turn red
+        use inline js/ts to access this variables state. same for the 
+        text of the button if true say add task else say closed
+-->

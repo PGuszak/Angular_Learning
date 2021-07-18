@@ -37,9 +37,6 @@ export class AddTaskComponent implements OnInit {
     this.TaskName = '';
     this.TaskDate = '';
     this.TaskReminder = false;
-
-
-
   }
 
 }
